@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   const handleLogOut = () => {
-    dispatch(setCurrentUser({ username: null }));
+    dispatch(setCurrentUser(null));
     navigate(ROUTES.HOME);
     toast.success('You log out succesfully');
   };
@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>Best Application</div>
-      {currentUser?.username ? (
+      {currentUser ? (
         <div className={styles['hello-block']}>
           <h3 className={styles.title}>Hello, {currentUser.username}</h3>
           <Button type="button" onClick={handleLogOut} text="Log Out" />

@@ -23,8 +23,9 @@ const SignInForm = () => {
     e.preventDefault();
     const data = await fetchUser(value);
     if (data.length) {
+      const user = data[0];
       navigate(ROUTES.HOME);
-      dispatch(setCurrentUser({ username: value }));
+      dispatch(setCurrentUser(user));
       toast.success('Succesfully entered');
     } else toast.error('User not found');
     setValue('');
