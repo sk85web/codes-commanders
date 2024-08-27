@@ -6,6 +6,7 @@ import styles from './Header.module.css';
 import { ROUTES } from '../../constants';
 import { AppDispatch, RootState } from '../../redux/store';
 import { setCurrentUser } from '../../redux/slices/userSlice';
+import toast from 'react-hot-toast';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Header = () => {
   const handleLogOut = () => {
     dispatch(setCurrentUser({ username: null }));
     navigate(ROUTES.HOME);
+    toast.success('You log out succesfully');
   };
 
   return (

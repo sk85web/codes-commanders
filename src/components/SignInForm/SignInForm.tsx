@@ -8,6 +8,7 @@ import { setCurrentUser } from '../../redux/slices/userSlice';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants';
 import fetchUser from '../../api/fetchUser';
+import toast from 'react-hot-toast';
 
 const SignInForm = () => {
   const [value, setValue] = useState('');
@@ -24,7 +25,8 @@ const SignInForm = () => {
     if (data.length) {
       navigate(ROUTES.HOME);
       dispatch(setCurrentUser({ username: value }));
-    } else alert('User not found');
+      toast.success('Succesfully entered');
+    } else toast.error('User not found');
     setValue('');
   };
 

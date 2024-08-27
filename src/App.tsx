@@ -7,6 +7,7 @@ import { ROUTES } from './constants';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
 import Container from './components/Container/Container';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.AUTH} element={<Auth />} />
           </Routes>
+          <Toaster />
         </Container>
       </BrowserRouter>
     </Provider>
