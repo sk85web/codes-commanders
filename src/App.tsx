@@ -6,16 +6,19 @@ import { store } from './redux/store';
 import { ROUTES } from './constants';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
+import Container from './components/Container/Container';
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path={ROUTES.HOME} element={<Home />} />
-          <Route path={ROUTES.AUTH} element={<Auth />} />
-        </Routes>
+        <Container>
+          <Header />
+          <Routes>
+            <Route path={ROUTES.HOME} element={<Home />} />
+            <Route path={ROUTES.AUTH} element={<Auth />} />
+          </Routes>
+        </Container>
       </BrowserRouter>
     </Provider>
   );

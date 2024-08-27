@@ -1,0 +1,21 @@
+.container,
+.title {
+  padding: 0 10px;
+}
+
+.posts-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  overflow-x: auto;
+  overflow: hidden;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.status-massage {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

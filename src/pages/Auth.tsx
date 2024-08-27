@@ -1,5 +1,7 @@
+import SignInForm from '../components/SignInForm/SignInForm';
+
 const Auth = () => {
-  return <div>Auth Page</div>;
+  return <SignInForm />;
 };
 
 export default Auth;
