@@ -31,10 +31,10 @@ const PostsBox = () => {
       <h1 className={styles.title}>Posts</h1>
       <ul className={styles['posts-box']}>
         {currentPosts.map(post => (
-          <li key={post.id} className="post-item">
+          <li key={post.id} className={styles['post-item']}>
             <Link
+              className={styles.link}
               to={`${ROUTES.DETAIL_POST}/${post.id}`}
-              style={{ textDecoration: 'none' }}
             >
               <Post title={post.title} body={post.body} />
             </Link>

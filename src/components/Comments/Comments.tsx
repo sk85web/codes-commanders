@@ -56,7 +56,9 @@ const Comments = ({ id }: ICommentsProps) => {
         <ul className={styles.commentsList}>
           {comments.map(comment => (
             <li key={comment.id} className={styles.commentItem}>
-              <h4 className={styles.commentAuthor}>{comment.name}</h4>
+              <h4 className={styles.commentAuthor}>
+                {comment.name}, <em>{comment.email}</em>
+              </h4>
               <p className={styles.commentBody}>{comment.body}</p>
             </li>
           ))}
