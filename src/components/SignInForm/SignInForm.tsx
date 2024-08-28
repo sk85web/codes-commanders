@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { ROUTES } from '../../constants';
 import fetchUser from '../../api/fetchUser';
 import toast from 'react-hot-toast';
+import BackBtn from '../BackBtn/BackBtn';
 
 const SignInForm = () => {
   const [value, setValue] = useState('');
@@ -32,19 +33,22 @@ const SignInForm = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1>Sign in</h1>
+    <>
+      <BackBtn />
+      <div className={styles.container}>
+        <h1>Sign in</h1>
 
-      <form action="/" onSubmit={onFormSubmit} className={styles.form}>
-        <InputForm
-          type="text"
-          placeholder="Enter your name"
-          value={value}
-          onChange={onInputChange}
-        />
-        <Button type="submit" text="Send" isDisabled={!value.trim()} />
-      </form>
-    </div>
+        <form action="/" onSubmit={onFormSubmit} className={styles.form}>
+          <InputForm
+            type="text"
+            placeholder="Enter your name"
+            value={value}
+            onChange={onInputChange}
+          />
+          <Button type="submit" text="Send" isDisabled={!value.trim()} />
+        </form>
+      </div>
+    </>
   );
 };
 
