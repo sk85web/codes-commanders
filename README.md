@@ -25,5 +25,7 @@ To learn more about React.js, Typescript and Redux-Toolkit take a look at the fo
 
 ## Deploy on Netlify
 
-The easiest way to deploy this app is to use the [Netlify](https://app.netlify.com/) platform.
+The easiest way to deploy this app is to use the [Netlify](https://app.netlify.com/) platform:
+
+[deploy](https://code-commanders-task.netlify.app/)
 
