@@ -6,6 +6,7 @@ import { store } from './redux/store';
 import { ROUTES } from './constants';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
+import DetailPost from './pages/DetailPost';
 import Container from './components/Container/Container';
 import { Toaster } from 'react-hot-toast';
 
@@ -18,6 +19,10 @@ function App() {
           <Routes>
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.AUTH} element={<Auth />} />
+            <Route
+              path={`${ROUTES.DETAIL_POST}/:id`}
+              element={<DetailPost />}
+            />
           </Routes>
           <Toaster />
         </Container>

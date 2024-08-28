@@ -1,0 +1,12 @@
+.arrow-icon {
+  cursor: pointer;
+  padding: 16px;
+  width: 42px;
+  border-radius: 10px;
+
+  transition: 0.2s linear all;
+}
+
+.arrow-icon:hover {
+  background-color: rgb(174, 174, 200);
+}

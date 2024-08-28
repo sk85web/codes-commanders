@@ -28,3 +28,11 @@ export interface IUser {
     bs: string;
   };
 }
+
+export interface IComment {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+}

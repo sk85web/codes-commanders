@@ -6,7 +6,7 @@ import { AppDispatch, RootState } from '../../redux/store';
 import Post from '../Post/Post';
 import { useEffect } from 'react';
 import { getPosts } from '../../redux/slices/postsSlice';
-import { POSTS_ON_PAGE } from '../../constants';
+import { POSTS_ON_PAGE, ROUTES } from '../../constants';
 
 const PostsBox = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -32,7 +32,10 @@ const PostsBox = () => {
       <ul className={styles['posts-box']}>
         {currentPosts.map(post => (
           <li key={post.id} className="post-item">
-            <Link to={`/books/${post.id}`} style={{ textDecoration: 'none' }}>
+            <Link
+              to={`${ROUTES.DETAIL_POST}/${post.id}`}
+              style={{ textDecoration: 'none' }}
+            >
               <Post title={post.title} body={post.body} />
             </Link>
           </li>

@@ -7,7 +7,7 @@ const fetchUser = async (username: string) => {
     const response = await axios.get(`${BASE_URL}/users?username=${username}`);
     return response.data;
   } catch (error) {
-    console.error('Failed to fetch');
+    console.error('Failed to fetch users');
   }
 };
 
