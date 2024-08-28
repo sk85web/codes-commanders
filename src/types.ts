@@ -36,3 +36,23 @@ export interface IComment {
   email: string;
   body: string;
 }
+
+export interface InputFormProps {
+  placeholder?: string;
+  type: 'text' | 'submit';
+  value: string;
+  className?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface IButtonProps {
+  className?: string;
+  text: string;
+  onClick?: () => void;
+  type: 'button' | 'submit';
+  isDisabled?: boolean;
+}
+
+export interface ICommentsProps {
+  id: string;
+}

@@ -11,7 +11,9 @@
   margin: 0 2px;
   border: 1px solid #ccc;
   cursor: pointer;
+  background-color: #d0cccc;
   transition: background-color 0.3s;
+  color: #000;
 }
 
 .nav-button:disabled {

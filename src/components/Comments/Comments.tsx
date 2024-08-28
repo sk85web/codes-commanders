@@ -1,16 +1,12 @@
 import { useEffect, useState } from 'react';
-import { fetchComments } from '../../api/fetchComments';
-import { IComment, IPost } from '../../types';
-import { fetchPostById } from '../../api/fetchPostById';
 
+import { fetchComments } from '../../api/fetchComments';
+import { IComment, IPost, ICommentsProps } from '../../types';
+import { fetchPostById } from '../../api/fetchPostById';
 import styles from './Comments.module.css';
 import BackBtn from '../BackBtn/BackBtn';
 
-interface CommentsProps {
-  id: string;
-}
-
-const Comments = ({ id }: CommentsProps) => {
+const Comments = ({ id }: ICommentsProps) => {
   const [comments, setComments] = useState<IComment[] | null>(null);
   const [post, setPost] = useState<IPost | null>(null);
 

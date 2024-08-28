@@ -5,6 +5,7 @@ import styles from './Pagination.module.css';
 import { AppDispatch, RootState } from '../../redux/store';
 import { POSTS_ON_PAGE } from '../../constants';
 import { setCurrentPage } from '../../redux/slices/postsSlice';
+import Button from '../Button/Button';
 
 const Pagination = () => {
   const navigate = useNavigate();
@@ -32,16 +33,15 @@ const Pagination = () => {
     const pages = [];
     for (let i = 1; i <= totalPages; i++) {
       pages.push(
-        <button
+        <Button
           type="button"
           key={i}
           className={`${styles['nav-button']} ${
             i === currentPage ? styles.active : ''
           }`}
           onClick={() => handlePageChange(i)}
-        >
-          {i}
-        </button>,
+          text={i.toString()}
+        />,
       );
     }
     return pages;
@@ -49,39 +49,38 @@ const Pagination = () => {
 
   return (
     <div className={styles.pagination}>
-      <button
+      <Button
         type="button"
         className={styles['nav-button']}
         onClick={handleFirstPage}
-        disabled={currentPage === 1 || loading}
-      >
-        First
-      </button>
-      <button
+        text="First"
+        isDisabled={currentPage === 1 || loading}
+      />
+
+      <Button
         type="button"
         className={styles['nav-button']}
         onClick={handlePrevPage}
-        disabled={currentPage === 1 || loading}
-      >
-        Prev
-      </button>
+        text="Prev"
+        isDisabled={currentPage === 1 || loading}
+      />
       {renderPageNumbers()}
-      <button
+
+      <Button
         type="button"
         className={styles['nav-button']}
         onClick={handleNextPage}
-        disabled={currentPage === totalPages || loading}
-      >
-        Next
-      </button>
-      <button
+        text="Next"
+        isDisabled={currentPage === totalPages || loading}
+      />
+
+      <Button
         type="button"
         className={styles['nav-button']}
         onClick={handleLastPage}
-        disabled={currentPage === totalPages || loading}
-      >
-        Last
-      </button>
+        text="Last"
+        isDisabled={currentPage === totalPages || loading}
+      />
     </div>
   );
 };

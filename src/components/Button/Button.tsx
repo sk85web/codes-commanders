@@ -1,14 +1,7 @@
 import styles from './Button.module.css';
+import { IButtonProps } from '../../types';
 
-interface ButtonProps {
-  className?: string;
-  text: string;
-  onClick?: () => void;
-  type: 'button' | 'submit';
-  isDisabled?: boolean;
-}
-
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<IButtonProps> = ({
   onClick,
   className,
   type,

@@ -1,14 +1,7 @@
 import React from 'react';
 
 import styles from './InputForm.module.css';
-
-interface InputFormProps {
-  placeholder?: string;
-  type: 'text' | 'submit';
-  value: string;
-  className?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
+import { InputFormProps } from '../../types';
 
 const InputForm: React.FC<InputFormProps> = ({
   placeholder,
