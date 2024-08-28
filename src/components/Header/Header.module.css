@@ -5,6 +5,7 @@
   padding: 10px 20px;
   background-color: #5c4646;
   border-bottom: 1px solid #ddd;
+  gap: 10px;
 }
 
 .logo {

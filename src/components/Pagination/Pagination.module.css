@@ -4,6 +4,8 @@
   align-items: center;
   gap: 5px;
   margin: 50px 0 20px;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
 .nav-button {
@@ -14,6 +16,9 @@
   background-color: #d0cccc;
   transition: background-color 0.3s;
   color: #000;
+  flex: 1 0 30px;
+  max-width: 100px;
+  text-align: center;
 }
 
 .nav-button:disabled {
