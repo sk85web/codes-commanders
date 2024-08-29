@@ -4,8 +4,15 @@ This is a [test-task](https://zaeba1sya.notion.site/Frontend-Junior-1fe0c7694563
 
 First, run the development server:
 
-```bash
-react-scripts start
+```
+bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
